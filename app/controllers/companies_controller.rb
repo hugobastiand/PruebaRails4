@@ -10,6 +10,8 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    @claim = @company.claims.build
+    @last_claims = @company.claims.last(5)
   end
 
   # GET /companies/new
